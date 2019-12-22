@@ -16,7 +16,7 @@
 встречаемости символов.
 """
 # 1-2. python -c “import this”
-text = """Beautiful is better than ugly.
+text = """Beautiful is bettEr than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
 Complex is better than complicated.
@@ -66,24 +66,33 @@ def every_18th_symbol(text):
     dict = {}
     index = 17
     while index < len(text):
-        dict[index+1] = text[index].upper()
+        dict[index+1] = text[index]
         index += 18
     for key, value in dict.items():
-        print(f"{value} {key}")
+        if value.isupper():
+            print(f"{value.lower()} {key}")
+        else:
+            print(f"{value.upper()} {key}")
 
 every_18th_symbol(text)
 
 # 6. Отпечатай на экран ту-же информацию о каждом символе в тексте, только отсортированной по символам в алфавитном
 # порядке.
 def symbol_index(text):
-    dict = {}
-    index = 0
-    while index < len(text):
-        dict[index + 1] = text[index].upper()
-        index += 1
-    sorted_values = sorted(dict.items(),  key=lambda x: x[1]) #got a list of tuples with alphabetically sorted items
-    for item in sorted_values:
-        print(f"{item[1]} {item[0]}")
+    set_of_text = set(text)
+    # How to do this automatically??
+    sorted_set_of_text = ['\n', ' ', '!', "'", '*', ',', '-', '.', 'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e', 'F', 'f',
+    'g', 'h', 'I', 'i', 'k', 'l', 'm', 'N', 'n', 'o', 'p', 'R', 'r', 'S', 's', 'T', 't', 'U', 'u', 'v', 'w', 'x', 'y']
+    list = []
+    for i in range(len(text)):
+        list.append([text[i], i + 1])
+    for sym in sorted_set_of_text:
+        for i in list:
+            if i[0] == sym:
+                if str(i[0]).isupper():
+                    print(str(i[0].lower()) + " " + str(i[1]))
+                else:
+                    print(str(i[0].upper()) + " " + str(i[1]))
 
 symbol_index(text)
 
@@ -110,4 +119,3 @@ def popular_symbol(text):
             print(f"{kv[0]} {kv[1]}")
 
 popular_symbol(text)
-
