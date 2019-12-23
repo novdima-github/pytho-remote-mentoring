@@ -104,9 +104,9 @@ def popular_symbol(text):
     dict = {}
     index = 0
     while index < len(text):
-        dict[index + 1] = text[index].upper()
+        dict[index + 1] = text[index]
         index += 1
-    sorted_values = sorted(dict.items(),  key=lambda x: x[1])
+    sorted_values = sorted(dict.items(),  key=lambda x: x[1]) # -> List of sorted pairs as the tuples
     data = []
     for item in sorted_values:
         data.append({item[1]:item[0]})
@@ -119,3 +119,40 @@ def popular_symbol(text):
             print(f"{kv[0]} {kv[1]}")
 
 popular_symbol(text)
+
+
+    # Another solution without Counter
+def popular_symbol_2(text):
+    # Create a list of lists with letters and their indexes
+    data = []
+    index = 0
+    while index < len(text):
+        data.append([index, text[index]])
+        index += 1
+
+    # Create a dict of letters frequency
+    all_freq = {}
+    for i in text:
+        if i in all_freq:
+            all_freq[i] += 1
+        else:
+            all_freq[i] = 1
+
+    # Add frequency as the third value of each sub-list
+    list_tripple = []
+    for key, value in all_freq.items():
+        for i in range(len(data)):
+            if data[i][1] == key:
+                list_tripple.append([value, data[i][0], data[i][1]])
+
+    # Sort data(sub-lists) by frequency
+    s_data = sorted(list_tripple, key=lambda e: e[0], reverse=True)
+
+    # Print each letter by frequency with their unique index value in the changed register
+    for lis in s_data:
+        if lis[2].isupper():
+            print(f"{lis[2].lower()} {lis[1]}")
+        else:
+            print(f"{lis[2].upper()} {lis[1]}")
+
+popular_symbol_2(text)
