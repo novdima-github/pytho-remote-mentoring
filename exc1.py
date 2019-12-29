@@ -80,9 +80,7 @@ every_18th_symbol(text)
 # порядке.
 def symbol_index(text):
     set_of_text = set(text)
-    # How to do this automatically??
-    sorted_set_of_text = ['\n', ' ', '!', "'", '*', ',', '-', '.', 'A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e', 'F', 'f',
-    'g', 'h', 'I', 'i', 'k', 'l', 'm', 'N', 'n', 'o', 'p', 'R', 'r', 'S', 's', 'T', 't', 'U', 'u', 'v', 'w', 'x', 'y']
+    sorted_set_of_text = sorted(set_of_text, key=lambda v: (v.upper(), v[0].islower()))
     list = []
     for i in range(len(text)):
         list.append([text[i], i + 1])
