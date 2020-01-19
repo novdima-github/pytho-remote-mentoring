@@ -127,4 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-tmp.py
+Exc1/tmp.py
