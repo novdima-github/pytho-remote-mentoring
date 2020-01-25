@@ -1,0 +1,31 @@
+"""
+Создай класс Store.
+От него унаследуй подклассы GroceryStore и HardwareStore
+Создай класс Good.
+От него унаследуй подклассы Food и Tool. Создай 4-5 подклассов от каждого (Banana, Apple, Ham, Nail, Axe,  Saw…)
+Каждый объект Good должен обладать read-only аттрибутом price, который задается в конструкторе, и должен быть положительным int или float.
+У этих объектов также должен быть метод set_discount, который принимает аргумент процентов скидки в виде int.
+Создай по одному магазину каждого типа, у каждого магазина должны быть методы add_item(item) и add_items(*items)
+
+У магазина должны быть аттрибуты, показывающие суммарную цену всех товаров в нем, со скидкой и без.
+Подсчитай общую стоимость товаров в каждом магазине со скидкой и без.
+Магазины должны добавлять товар только свойственного им типа.
+
+
+Пример:
+
+belmarket = GroceryStore()
+bananas = Banana(6)  # создаем бананы по 6$
+strawberry = Strawberry(22)  # создаем клубнику по 22$
+belmarket.add_item(bananas)
+belmarket.add_item(strawberry)
+print(belmarket.overall_price_no_discount)  # -> возвращаем 6+22 -> 28
+
+belmarket.remove_item(strawberry)
+strawberry.set_discount(50)
+belmarket.add_item(strawberry)
+print(belmarket.overall_price_no_discount)
+
+hammer = Hammer(50)
+belmarket.add_item(hammer)  # -> печатаем ошибку и не добавляем товар
+"""
