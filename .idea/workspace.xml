@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="494d7709-03c5-4504-af6a-efad52022290" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exc2/class_Store.py" beforeDir="false" afterPath="$PROJECT_DIR$/Exc2/class_Store.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exc2/classes_Stores.py" beforeDir="false" afterPath="$PROJECT_DIR$/Exc2/classes_Stores.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Exc2/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +42,7 @@
       <recent name="F:\Дима\Python_tutorial\python-remote-mentoring" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Python.try (1)">
     <configuration name="class_Store" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pytho-remote-mentoring" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,7 +127,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="try" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="try (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pytho-remote-mentoring" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,11 +135,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Exc2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Exc2/try.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/try.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.try (1)" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python.class_Store" />
         <item itemvalue="Python.classes_Stores" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.try" />
       </list>
     </recent_temporary>
   </component>
@@ -187,28 +184,32 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1429" height="283" key="GridCell.Tab.0.bottom" timestamp="1579977741937">
+    <state x="-1134" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579978160366">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1429" height="283" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579977741937" />
+    <state x="-1134" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579978160366" />
+    <state width="1429" height="283" key="GridCell.Tab.0.bottom" timestamp="1579983908152">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1429" height="283" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579983908152" />
     <state width="1515" height="220" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1579433064564" />
     <state width="1515" height="86" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1578982990072" />
-    <state width="1429" height="283" key="GridCell.Tab.0.center" timestamp="1579977741937">
+    <state width="1429" height="283" key="GridCell.Tab.0.center" timestamp="1579983908152">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1429" height="283" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579977741937" />
+    <state width="1429" height="283" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579983908152" />
     <state width="1515" height="220" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1579433064564" />
     <state width="1515" height="86" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1578982990072" />
-    <state width="1429" height="283" key="GridCell.Tab.0.left" timestamp="1579977741937">
+    <state width="1429" height="283" key="GridCell.Tab.0.left" timestamp="1579983908151">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1429" height="283" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579977741937" />
+    <state width="1429" height="283" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579983908151" />
     <state width="1515" height="220" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1579433064564" />
     <state width="1515" height="86" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1578982990071" />
-    <state width="1429" height="283" key="GridCell.Tab.0.right" timestamp="1579977741937">
+    <state width="1429" height="283" key="GridCell.Tab.0.right" timestamp="1579983908152">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1429" height="283" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579977741937" />
+    <state width="1429" height="283" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1579983908152" />
     <state width="1515" height="220" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1579433064564" />
     <state width="1515" height="86" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1578982990072" />
     <state width="1515" height="348" key="GridCell.Tab.1.bottom" timestamp="1579711052576">
