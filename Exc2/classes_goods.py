@@ -1,5 +1,7 @@
-class Good:
+'Goods classes'
 
+class Good:
+    'Main class Good for all goods'
     def __init__(self, price):
         if price > 0:
             self._price = price
@@ -9,11 +11,13 @@ class Good:
 
     @property
     def price(self):
+        'Set price for any good'
         print("{} price: {}".format(self.__class__.__name__,
                                     self._price))
         return self._price
 
     def set_discount(self, discount):
+        'Set discount for any good'
         self.discount = discount
         self.discounted_price = self._price * (
                     1 - self.discount / 100)
@@ -24,33 +28,40 @@ class Good:
 
 
 class Food(Good):
-    pass
+    'Food is a child of a Good class'
 
 
 class Banana(Food):
-    pass
+    'Banana is a child of a Food class'
 
 
 class Apple(Food):
-    pass
+    'Apple is a child of a Food class'
+    @property
+    def price(self):
+        return self._price
+
+    @price.setter
+    def price(self, value):
+        self._price = value
 
 
 class Lemon(Food):
-    pass
+    'Lemon is a child of a Food class'
 
 
 class Tool(Good):
-    pass
+    'Tool is a child of a Good class'
 
 
 class Nail(Tool):
-    pass
+    'Nail is a child of a Tool class'
 
 
 class Axe(Tool):
-    pass
+    'Axe is a child of a Tool class'
 
 
 class Hammer(Tool):
-    pass
+    'Hammer is a child of a Tool class'
 
