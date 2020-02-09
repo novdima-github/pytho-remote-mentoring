@@ -28,7 +28,7 @@ apple.discount = 57
 super_store = Store()
 apple.price = 301
 grocery.add_good(hammer)
-hardware.add_goods(hammer,apple,pear)
+hardware.add_goods(hammer, apple, pear)
 print(grocery.overall_price_no_discount)
 print(grocery.overall_price_with_discount)
 
@@ -40,3 +40,11 @@ print(grocery.overall_price_no_discount)
 print(grocery.overall_price_with_discount)
 print(hardware.overall_price_no_discount)
 print(hardware.overall_price_with_discount)
+
+hardware.remove_good(nail)
+grocery.remove_good(nail)
+
+print(hardware.overall_price_no_discount)
+print(hardware.overall_price_with_discount)
+print(hardware.all_goods_in_store)
+print(grocery.all_goods_in_store)

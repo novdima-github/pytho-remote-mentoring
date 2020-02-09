@@ -9,9 +9,6 @@ class Store:
     def __init__(self):
         self.all_goods = set()
 
-    def remove_good(self, good):
-        """Remove item from the store"""
-
     @property
     def overall_price_no_discount(self):
         """Show overall price without discount"""
@@ -37,6 +34,16 @@ class Store:
         for good in self.all_goods:
             all_goods.append(good.__class__.__name__)
         return all_goods
+
+    def remove_good(self, good):
+        """Remove item from the store"""
+        self.good = good
+        if self.good in self.all_goods:
+            self.all_goods.remove(self.good)
+            print(f"{self.good.__class__.__name__} was removed from "
+                  f"{self.__class__.__name__}")
+        print(
+            f"{self.good.__class__.__name__} not in {self.__class__.__name__}")
 
 
 class GroceryStore(Store):
