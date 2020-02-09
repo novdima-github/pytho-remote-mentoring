@@ -30,9 +30,9 @@ class Store:
     @property
     def all_goods_in_store(self):
         """Show all items"""
-        all_goods = []
+        all_goods = set()
         for good in self.all_goods:
-            all_goods.append(good.__class__.__name__)
+            all_goods.add(good.__class__.__name__)
         return all_goods
 
     def remove_good(self, good):
