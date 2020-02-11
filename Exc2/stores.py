@@ -13,11 +13,12 @@ class Store:
     @property
     def overall_price_no_discount(self):
         """Show overall price without discount"""
-        total = 0
+        set_of_prices = set()
         for good in self.all_goods:
-            total += good.price
+            set_of_prices.add(good.price)
+        sum_of_prices = sum(set_of_prices)
         return f"Total overall {self.__class__.__name__} price: " \
-               f"{str(round(total, 2))}"
+               f"{str(round(sum_of_prices, 2))}"
 
     @property
     def overall_price_with_discount(self):
@@ -33,7 +34,8 @@ class Store:
         """Show all items"""
         all_goods = set()
         for good in self.all_goods:
-            all_goods.add(good.__class__.__name__)
+            all_goods.add((good.__class__.__name__, good.price,
+                           good.discount, good.price_with_discount))
         return all_goods
 
     def remove_good(self, good):
