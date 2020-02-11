@@ -49,6 +49,17 @@ class Store:
             print(f"{good.__class__.__name__} "
                   f"not in {self.__class__.__name__}")
 
+    def add_any_good(self, good):
+        """Add a good to the store"""
+        self.all_goods.add(good)
+        print(f"{good.__class__.__name__} was added to the "
+              f"{self.__class__.__name__}")
+
+    def add_goods(self, *items):
+        """Add items to the store"""
+        for item in items:
+            self.add_any_good(item)
+
 
 class GroceryStore(Store):
     """GroceryStore inherited from Store"""
@@ -56,17 +67,10 @@ class GroceryStore(Store):
     def add_good(self, good):
         """Add a good to the store"""
         if isinstance(good, Food):
-            self.all_goods.add(good)
-            print(f"{good.__class__.__name__} was added to the "
-                  f"{self.__class__.__name__}")
+            self.add_any_good(good)
         else:
             print(f"Sorry, {good.__class__.__name__} can't be added to "
                   f"the {self.__class__.__name__} store")
-
-    def add_goods(self, *items):
-        """Add items to the store"""
-        for item in items:
-            self.add_good(item)
 
 
 class HardwareStore(Store):
@@ -75,9 +79,7 @@ class HardwareStore(Store):
     def add_good(self, good):
         """Add a good to the store"""
         if isinstance(good, Tool):
-            self.all_goods.add(good)
-            print(f"{good.__class__.__name__} was added to the "
-                  f"{self.__class__.__name__}")
+            self.add_any_good(good)
         else:
             print(f"Sorry, {good.__class__.__name__} can't be added to "
                   f"the {self.__class__.__name__} store")
