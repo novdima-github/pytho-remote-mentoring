@@ -6,7 +6,8 @@ from goods import Tool, Food
 class Store:
     """This is a main Store class"""
 
-    def __init__(self):
+    def __init__(self, good=None):
+        self.good = good
         self.all_goods = set()
 
     @property
@@ -37,56 +38,48 @@ class Store:
 
     def remove_good(self, good):
         """Remove item from the store"""
-        self.good = good
-        if self.good in self.all_goods:
-            self.all_goods.remove(self.good)
-            print(f"{self.good.__class__.__name__} was removed from "
+        if good in self.all_goods:
+            self.all_goods.remove(good)
+            print(f"{good.__class__.__name__} was removed from "
                   f"{self.__class__.__name__}")
-        print(
-            f"{self.good.__class__.__name__} not in {self.__class__.__name__}")
+        else:
+            print(f"{good.__class__.__name__} "
+                  f"not in {self.__class__.__name__}")
 
 
 class GroceryStore(Store):
     """GroceryStore inherited from Store"""
 
-    def __init__(self):
-        super().__init__()
-
     def add_good(self, good):
         """Add a good to the store"""
-        self.good = good
-        if isinstance(self.good, Food):
-            self.all_goods.add(self.good)
-            print(f"{self.good.__class__.__name__} was added to the "
+        if isinstance(good, Food):
+            self.all_goods.add(good)
+            print(f"{good.__class__.__name__} was added to the "
                   f"{self.__class__.__name__}")
         else:
-            print(f"Sorry, {self.good.__class__.__name__} can't be added to "
+            print(f"Sorry, {good.__class__.__name__} can't be added to "
                   f"the {self.__class__.__name__} store")
 
     def add_goods(self, *items):
         """Add items to the store"""
-        for self.item in items:
-            self.add_good(self.item)
+        for item in items:
+            self.add_good(item)
 
 
 class HardwareStore(Store):
     """HardwareStore inherited from Store"""
 
-    def __init__(self):
-        super().__init__()
-
     def add_good(self, good):
         """Add a good to the store"""
-        self.good = good
-        if isinstance(self.good, Tool):
-            self.all_goods.add(self.good)
-            print(f"{self.good.__class__.__name__} was added to the "
+        if isinstance(good, Tool):
+            self.all_goods.add(good)
+            print(f"{good.__class__.__name__} was added to the "
                   f"{self.__class__.__name__}")
         else:
-            print(f"Sorry, {self.good.__class__.__name__} can't be added to "
+            print(f"Sorry, {good.__class__.__name__} can't be added to "
                   f"the {self.__class__.__name__} store")
 
     def add_goods(self, *items):
         """Add items to the store"""
-        for self.item in items:
-            self.add_good(self.item)
+        for item in items:
+            self.add_good(item)
